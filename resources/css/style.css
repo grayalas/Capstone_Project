@@ -1,0 +1,51 @@
+/* Global styling */
+
+body, html  {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container  {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+/* Navigation */
+
+nav .container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo a  {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.4rem
+}
+
+nav .logo a img  {
+  height: auto;
+  width: 40px;
+}
+
+/* Hero Section */
+
+#hero  {
+  height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("..//images/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.featured img, video  {
+  max-width: 60%;
+}
