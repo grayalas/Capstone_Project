@@ -1,15 +1,23 @@
 /* Global styling */
 
 body, html  {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+h1, h2  {
+  color: #f7f7f7;
+}
+
+h3, h4, p, a {
+  color: #333333;
 }
 
 .container  {
   max-width: 1280px;
   margin: auto;
-  padding: 0 24px;
+  padding: 0 4%;
 }
 
 /* Navigation */
@@ -35,17 +43,77 @@ nav .logo a img  {
   width: 40px;
 }
 
+nav ul  {
+  margin-right: -8px;
+  display: flex;
+}
+
+nav ul li a  {
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 0 8px;
+}
+
+nav .logo p span  {
+  font-weight: bold;
+}
+
 /* Hero Section */
 
 #hero  {
+  position: relative;
   height: 100vh;
   background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url("..//images/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: left;
 }
-
 
 .featured img, video  {
   max-width: 60%;
+}
+
+.hero-content-bar {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: calc((100% + 1152px)/2);
+  height: 350px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#hero .container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-content  {
+  max-width: 700px;
+}
+
+#hero h1  {
+  letter-spacing: 0.15rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+#hero h2  {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+#hero a {
+  color: #333333;
+  font-size: 0.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 1.25rem 2rem;
+  letter-spacing: 0.15rem;
 }
