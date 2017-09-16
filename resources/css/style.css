@@ -75,9 +75,9 @@ nav .logo p span  {
 }
 
 .hero-content-bar {
-  background-color: rgba(0, 0, 0, 0.9);
-  width: calc((100% + 1152px)/2);
-  height: 350px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: calc((100% + 1280px)/2);
+  height: 450px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
