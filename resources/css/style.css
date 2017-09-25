@@ -4,6 +4,7 @@ body, html  {
   font-family: 'Oxygen', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 h1, h2  {
@@ -12,12 +13,23 @@ h1, h2  {
 
 h3, h4, p, a {
   color: #333333;
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .container  {
   max-width: 1280px;
   margin: auto;
-  padding: 0 4%;
+  padding: 0 24px;
 }
 
 /* Navigation */
@@ -58,6 +70,15 @@ nav .logo p span  {
   font-weight: bold;
 }
 
+section  {
+  padding: 32px 0px;
+}
+
+.featured {
+  width: 60%;
+  padding-right: 24px;
+}
+
 /* Hero Section */
 
 #hero  {
@@ -68,16 +89,13 @@ nav .logo p span  {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: left;
-}
-
-.featured img, video  {
-  max-width: 60%;
+  padding: 0px;
 }
 
 .hero-content-bar {
   background-color: rgba(0, 0, 0, 0.8);
   width: calc((100% + 1280px)/2);
-  height: 450px;
+  height: 50%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -116,4 +134,92 @@ nav .logo p span  {
   text-align: center;
   padding: 1.25rem 2rem;
   letter-spacing: 0.15rem;
+}
+
+/* Articles section */
+
+#articles .container {
+  display: flex;
+}
+
+.featured {
+  width: 60%;
+  flex: 0 1 auto;
+}
+
+.featured a {
+  text-decoration: none;
+}
+
+.featured a > .featured-copy > h3 {
+  border-bottom: 2px solid transparent;
+  transition: border 0.25s ease;
+}
+
+.featured a:hover > .featured-copy > h3 {
+  border-bottom: 2px solid #333333;
+}
+
+.featured-copy {
+  width: 95%;
+}
+
+.featured img {
+  width: 100%;
+}
+
+.featured h3 {
+  padding-top: 32px;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.featured p {
+  padding-top: 24px;
+}
+
+.featured p:last-child {
+  padding: 32px 0;
+  font-size: 0.85rem;
+}
+
+.article-list {
+  width: 40%;
+  margin-top: -16px;
+  flex: 1 0 auto;
+}
+
+.article-block a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease;
+}
+
+.article-block a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.article-block img {
+  width: 35%;
+  margin: 16px;
+}
+
+.article-copy * {
+  padding: 5px 0;
+}
+
+.article-copy .read-more {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+
+/* Thesis section */
+
+video {
+  width: 100%;
 }
