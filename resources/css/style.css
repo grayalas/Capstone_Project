@@ -17,7 +17,7 @@ h3, h4, p {
 }
 
 a {
-    color: #333333;
+  color: #333333;
 }
 
 h3 {
@@ -34,7 +34,7 @@ h4 {
 .container  {
   max-width: 1280px;
   margin: auto;
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 
 section  {
@@ -43,11 +43,17 @@ section  {
 
 .featured {
   width: 60%;
-  padding-right: 24px;
+  padding-right: 1.5rem;
 }
 
 .transition {
   transition: all 0.35s ease;
+}
+
+@media only screen and (max-width: 954px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 /* Navigation */
@@ -77,12 +83,12 @@ nav .logo a  {
   align-items: center;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.4rem
+  font-size: 1.4rem;
 }
 
 nav .logo a img  {
   height: auto;
-  width: 40px;
+  width: 2.5rem;
 }
 
 nav ul  {
@@ -105,6 +111,42 @@ nav .logo p span  {
   font-weight: bold;
 }
 
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 775px) {
+  nav .logo a img  {
+    width: 2rem;
+  }
+
+  nav ul, nav .logo a p {
+    display: none;
+  }
+
+  nav .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  nav .container .logo {
+    flex: 1 0 auto;
+  }
+
+  .mobile-nav {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    justify-content: space-between;
+    flex: 1 0 auto;
+  }
+
+  .mobile-nav li a img {
+    width: 2rem;
+  }
+}
 
 /* Hero Section */
 
@@ -115,7 +157,6 @@ nav .logo p span  {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: left;
   padding: 0px;
 }
 
@@ -170,6 +211,24 @@ nav .logo p span  {
   color: #f7f7f7;
 }
 
+@media only screen and (max-width: 954px) {
+  #hero {
+  text-align: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("..//images/banner.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  .hero-content-bar {
+    display: none;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+  }
+}
+
 /* Articles section */
 
 #articles .container {
@@ -185,7 +244,7 @@ nav .logo p span  {
   text-decoration: none;
 }
 
-.featured a > .featured-copy > h3 {
+.featured a .featured-copy h3 {
   border-bottom: 2px solid transparent;
   transition: border 0.25s ease;
 }
@@ -209,7 +268,7 @@ nav .logo p span  {
 }
 
 .featured p {
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 
 .featured p:last-child {
@@ -229,7 +288,6 @@ nav .logo p span  {
   align-items: center;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  /*transition: background-color 0.5s ease;*/
 }
 
 .article-block a:hover {
@@ -251,6 +309,54 @@ nav .logo p span  {
   letter-spacing: 0.15rem;
 }
 
+.mobile-article-img  {
+  display: none;
+}
+
+@media only screen and (max-width: 954px) {
+
+  #articles .container {
+    padding: 0;
+  }
+
+  #articles .featured {
+    display: none;
+  }
+
+  .article-list  {
+    margin-top: -2rem;
+  }
+
+  .article-block:nth-child(2n + 0) {
+    margin: 2rem 0;
+  }
+
+  .article-block a {
+    border: 0;
+    padding: 1rem;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .desktop-article-img {
+    display: none;
+  }
+
+  .mobile-article-img  {
+    display: block;
+  }
+
+  .article-block img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .article-copy {
+    margin: 1rem 0 0 1rem;
+  }
+
+}
+
 /* Learing section */
 
 #learning {
@@ -266,7 +372,7 @@ nav .logo p span  {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding: 0 48px;
+  padding: 0 3rem;
 }
 
 .course-block {
@@ -290,12 +396,32 @@ nav .logo p span  {
 }
 
 .course-block-copy {
-  padding: 1rem 1rem 24px 1rem;
+  padding: 1rem;
 }
 
 .course-block-copy p span {
   display: inline-block;
   margin: 8px 0;
+}
+
+@media only screen and (max-width: 775px) {
+  #learning img {
+    display: none;
+  }
+
+  .courses-grid {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .course-block-copy p {
+    display: none;
+  }
+
+  .course-block {
+    margin: .25rem 0rem;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Thesis section */
@@ -311,6 +437,29 @@ nav .logo p span  {
 
 video {
   width: 100%;
+}
+
+@media only screen and (max-width: 954px) {
+  section#thesis  {
+    padding-bottom: 1.5rem;
+  }
+
+  #thesis > h3 {
+    margin-bottom: 1rem;
+  }
+
+  #thesis .article-list {
+    display: none;
+  }
+
+  #thesis .featured {
+    width: 100%;
+    padding: 0;
+  }
+
+  #thesis .featured-copy {
+    display: none;
+  }
 }
 
 /* Footer */
@@ -335,4 +484,10 @@ footer a {
 
 footer a:hover {
   border-bottom: 1px solid #333333;
+}
+
+@media only screen and (max-width: 954px) {
+  footer a {
+    display: none;
+  }
 }
