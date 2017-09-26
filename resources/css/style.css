@@ -482,7 +482,7 @@ footer {
 footer .container {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 
 footer a {
