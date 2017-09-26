@@ -286,7 +286,6 @@ nav .logo p span  {
   display: flex;
   text-decoration: none;
   align-items: center;
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -299,14 +298,25 @@ nav .logo p span  {
   margin: 1rem;
 }
 
+.article-copy {
+  max-width: 50%;
+}
+
 .article-copy * {
   padding: 5px 0;
 }
 
-.article-copy .read-more {
+.article-block a .article-copy .read-more {
+  color: #333333;
+  border-bottom: 1px solid transparent;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
+}
+
+.article-block a:hover > .article-copy .read-more {
+  color: blue;
+  border-bottom: 1px solid blue;
 }
 
 .mobile-article-img  {
